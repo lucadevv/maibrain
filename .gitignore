@@ -45,4 +45,4 @@ app.*.map.json
 
 # Ignorar el archivo de claves API
 api-keys.json
-./android/app/google-services.json
+/android/app/google-services.json

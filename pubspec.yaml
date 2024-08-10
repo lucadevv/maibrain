@@ -1,0 +1,36 @@
+name: maibrain
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  another_flushbar: ^1.12.30
+  cloud_firestore: ^5.2.0
+  equatable: ^2.0.5
+  firebase_core: ^3.3.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  flutter_svg: ^2.0.10+1
+  iconsax: ^0.0.8
+  permission_handler: ^11.3.1
+  qr_code_scanner: ^1.0.1
+
+dev_dependencies:
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/fonts/
+  fonts:
+    - family: Play
+      fonts:
+        - asset: assets/fonts/Play-Bold.ttf
+        - asset: assets/fonts/Play-Regular.ttf

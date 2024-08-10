@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "mainbrain_app ",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define-from-file=api-keys.json"
+            ]
+        },
+        {
+            "name": "mainbrain_app (mode-profie)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "flutterMode": "profile",
+            "args": [
+                "--dart-define-from-file=api-keys.json"
+            ]
+        },
+        {
+            "name": "mainbrain_app  (mode-release)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "flutterMode": "release",
+            "args": [
+                "--dart-define-from-file=api-keys.json"
+            ]
+        }
+    ]
+}

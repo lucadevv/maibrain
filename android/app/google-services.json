@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "515646999592",
+    "project_id": "maibrain-adac9",
+    "storage_bucket": "maibrain-adac9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515646999592:android:0c2595aa140f23ed82f91d",
+        "android_client_info": {
+          "package_name": "com.maibrain.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE0ECgWAHFh-beo2uvQ7JarKyQJlHPOOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

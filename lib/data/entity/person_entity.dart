@@ -5,6 +5,7 @@ class PersonEntity {
   final String voiceId;
   final String name;
   final String userId;
+  final String personId;
   final List<Knowledge> knowledge;
 
   PersonEntity({
@@ -12,6 +13,7 @@ class PersonEntity {
     required this.voiceId,
     required this.name,
     required this.userId,
+    required this.personId,
     required this.knowledge,
   });
 
@@ -20,6 +22,7 @@ class PersonEntity {
     String? voiceId,
     String? name,
     String? userId,
+    String? personId,
     List<Knowledge>? knowledge,
   }) {
     return PersonEntity(
@@ -28,6 +31,7 @@ class PersonEntity {
       name: name ?? this.name,
       userId: userId ?? this.userId,
       knowledge: knowledge ?? this.knowledge,
+      personId: personId ?? this.personId,
     );
   }
 
@@ -48,6 +52,7 @@ class PersonEntity {
       voiceId: map["voiceId"] as String? ?? '',
       name: map["name"] as String? ?? '',
       userId: map["userId"] as String? ?? '',
+      personId: map["personId"] as String,
       knowledge: (map["knowledge"] as List<dynamic>? ?? [])
           .map((item) => Knowledge.fromJson(item as Map<String, dynamic>))
           .toList(),

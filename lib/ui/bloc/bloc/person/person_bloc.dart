@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:maibrain/domain/models/user_model.dart';
+import 'package:maibrain/domain/models/response/user_model.dart';
 import 'package:maibrain/domain/repository/user_repository.dart';
 import 'package:maibrain/shared/errors/custom_error.dart';
 

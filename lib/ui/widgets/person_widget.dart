@@ -1,7 +1,7 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:maibrain/domain/models/user_model.dart';
+import 'package:maibrain/domain/models/response/user_model.dart';
 import 'package:maibrain/shared/navigation/cubit/navigation_page_cubit.dart';
 import 'package:maibrain/shared/res/values/app_colors.dart';
 import 'package:maibrain/shared/res/values/app_strings.dart';
@@ -95,8 +95,8 @@ class PersonStateSucces extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     final textTheme = Theme.of(context).textTheme;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -126,8 +126,7 @@ class PersonStateSucces extends StatelessWidget {
           child: IconButton(
             iconSize: 50,
             onPressed: () {
-              context.read<ChatBloc>().add(
-                  FetchChatEvent(userId: item.userId, name: item.personName));
+              context.read<ChatBloc>().add(FetchChatEvent(userModel: item));
               context.read<NavigationPageCubit>().navigateToPge(0);
             },
             icon: const Icon(

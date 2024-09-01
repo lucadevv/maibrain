@@ -5,6 +5,7 @@ class PersonModel {
   final String voiceId;
   final String name;
   final String userId;
+  final String personId;
   final List<KnowledgeModel> knowledge;
 
   PersonModel({
@@ -13,6 +14,7 @@ class PersonModel {
     required this.name,
     required this.userId,
     required this.knowledge,
+    required this.personId,
   });
 
   PersonModel copyWith({
@@ -20,6 +22,7 @@ class PersonModel {
     String? voiceId,
     String? name,
     String? userId,
+    String? personId,
     List<KnowledgeModel>? knowledge,
   }) =>
       PersonModel(
@@ -28,6 +31,7 @@ class PersonModel {
         name: name ?? this.name,
         userId: userId ?? this.userId,
         knowledge: knowledge ?? this.knowledge,
+        personId: personId ?? this.personId,
       );
   factory PersonModel.fromEntity(PersonEntity entity) {
     return PersonModel(
@@ -38,6 +42,7 @@ class PersonModel {
       knowledge: entity.knowledge
           .map((knowledge) => KnowledgeModel.fromEntity(knowledge))
           .toList(),
+      personId: entity.personId,
     );
   }
 
@@ -48,6 +53,7 @@ class PersonModel {
         userId: json["userId"],
         knowledge: List<KnowledgeModel>.from(
             json["knowledge"].map((x) => KnowledgeModel.fromJson(x))),
+        personId: json['personId'],
       );
 
   factory PersonModel.empty() {
@@ -57,6 +63,7 @@ class PersonModel {
       name: '',
       userId: '',
       knowledge: [],
+      personId: '',
     );
   }
 

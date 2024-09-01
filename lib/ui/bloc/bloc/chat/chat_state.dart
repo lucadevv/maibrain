@@ -2,27 +2,37 @@ part of 'chat_bloc.dart';
 
 class ChatState extends Equatable {
   final ChatStatus chatStatus;
-  final PersonModel personModel;
+  final UserModel userModel;
+  final MessageModel messageModel;
+  final List<String> listMessage;
   const ChatState({
     required this.chatStatus,
-    required this.personModel,
+    required this.userModel,
+    required this.messageModel,
+    required this.listMessage,
   });
   ChatState copyWith({
     ChatStatus? chatStatus,
-    PersonModel? personModel,
+    UserModel? userModel,
+    MessageModel? messageModel,
+    List<String>? listMessage,
   }) =>
       ChatState(
         chatStatus: chatStatus ?? this.chatStatus,
-        personModel: personModel ?? this.personModel,
+        userModel: userModel ?? this.userModel,
+        messageModel: messageModel ?? this.messageModel,
+        listMessage: listMessage ?? this.listMessage,
       );
   factory ChatState.initial() {
     return ChatState(
       chatStatus: ChatStatus.initializing,
-      personModel: PersonModel.empty(),
+      userModel: UserModel.empty(),
+      messageModel: MessageModel.empty(),
+      listMessage: const [],
     );
   }
   @override
-  List<Object> get props => [chatStatus, personModel];
+  List<Object> get props => [chatStatus, userModel, messageModel];
 }
 
 enum ChatStatus {

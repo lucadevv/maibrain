@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:maibrain/shared/navigation/cubit/navigation_page_cubit.dart';
-import 'package:maibrain/shared/res/values/app_colors.dart';
 import 'package:maibrain/ui/pages/home_page.dart';
 import 'package:maibrain/ui/pages/qr_page.dart';
 import 'package:maibrain/ui/pages/settings_page.dart';

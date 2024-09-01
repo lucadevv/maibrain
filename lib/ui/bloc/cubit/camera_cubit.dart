@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:maibrain/domain/models/user_model.dart';
+import 'package:maibrain/domain/models/response/user_model.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 part 'camera_state.dart';
